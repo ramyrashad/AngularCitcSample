@@ -9,7 +9,4 @@ export class LandingPageService {
 
   constructor(private http: HttpClient) { }
 
-  getAlltutorialVideos(model) {
-    return this.http.post("TutorialVideos/Search", model).pipe();
-  }
 }
