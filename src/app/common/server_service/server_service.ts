@@ -12,7 +12,6 @@ export class ServerService {
     constructor(private http: HttpClient) { }
 
     getHTMLContent() {
-        debugger;
         const baseToken = this.generateBaseAuthorizationToken();
         return this.http.get<HTMLModel>("https://individualsui.saudisystems.net/ui", {
             headers: { 'Authorization': 'Basic ' + baseToken }

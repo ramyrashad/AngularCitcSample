@@ -12,6 +12,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   constructor(private router: Router
     , @Inject(DOCUMENT) private document: Document) {
+      debugger;
   }
 
   ngAfterViewInit() {

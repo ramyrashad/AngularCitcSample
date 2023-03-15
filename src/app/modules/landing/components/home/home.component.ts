@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    debugger;
     let serverLoadContent = this.document.getElementById("serverLoadContent");
     if (serverLoadContent) {
       this.serverService.getHTMLContent().then(res => {
@@ -49,6 +49,10 @@ export class HomeComponent implements OnInit {
         }
       });
       serverLoadContent.removeAttribute("id");
+    }
+    else {
+      let headerContent2 = this.document.getElementById("headerContent2");
+      headerContent2.innerHTML = "Content Loaded";
     }
   }
 

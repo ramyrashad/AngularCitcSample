@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --o --port 5200",
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && ng serve --o --port 5200",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run SSRCict:serve-ssr",
+    "dev:ssr": "SET NODE_OPTIONS=--openssl-legacy-provider && ng run SSRCict:serve-ssr",
     "serve:ssr": "node dist/SSRCict/server/main.js",
-    "build:ssr": "ng build --prod --aot --build-optimizer --base-href /  && ng run SSRCict:server:production ",
+    "build:ssr": "SET NODE_OPTIONS=--openssl-legacy-provider && ng build --prod --aot --build-optimizer --base-href /  && ng run SSRCict:server:production ",
     "prerender": "ng run SSRCict:prerender"
   },
   "private": true,
